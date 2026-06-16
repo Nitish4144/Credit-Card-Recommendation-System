@@ -23,10 +23,14 @@ def create_transaction(transaction: TransactionRequest):
     )
 
 
-@router.post("/upload")
-async def upload_file(file: UploadFile=File(...)):
-    contents = await file.read()
-    return {
-        "filename": file.filename,
-        "size": len(contents)
-    }
+# @router.post("/upload")
+# async def upload_file(file: UploadFile=File(...)):
+#     contents = await file.read()
+#     return {
+#         "filename": file.filename,
+#         "size": len(contents)
+#     }
+
+
+
+## you will find this endpoint in upload.py

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float
+from sqlalchemy import Column, Integer, String, Float, Date
 from app.core.database import Base
 
 
@@ -7,7 +7,7 @@ class Transaction(Base):
 
     id = Column(Integer, primary_key=True, index=True)
 
-    date = Column(String)
+    date = Column(Date)
 
     description = Column(String)
 

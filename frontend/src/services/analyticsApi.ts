@@ -15,7 +15,7 @@ export const getCategories = async() => {
 };
 
 export const getMonthly = async() => {
-    const response = await axios.get(`${API_BASE}/analytivs/monthly`);
+    const response = await axios.get(`${API_BASE}/analytics/monthly`);
 
     return response.data;
 };

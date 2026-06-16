@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Dashboard from "./pages/Dashboard";
+
 
 import {
   getHealth,
@@ -37,7 +39,10 @@ function App() {
       <hr />
 
          <UploadForm />
+      <hr />
+         <Dashboard />
     </div>
+    
   );
 }
 

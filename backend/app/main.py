@@ -5,10 +5,12 @@ from app.core.database import engine
 from app.models.transaction import Transaction
 from app.core.database import Base
 
-from app.routes.upload import router as upload_router
 from app.api.routes import router
+from app.routes.upload import router as upload_router
+from app.api.analytics import router as analytics_router
 
 Base.metadata.create_all(bind=engine)
+
 app = FastAPI( title = "Credit Card Recommendation API")
 
 app.add_middleware(
@@ -19,5 +21,6 @@ app.add_middleware(
     allow_headers=["*",]
 )
 
-app.include_router(upload_router)
 app.include_router(router)
+app.include_router(upload_router)
+app.include_router(analytics_router)

@@ -1,23 +1,33 @@
+from datetime import datetime
 import pandas as pd
 
-from app.services.categorization_service import categorize_transaction
+from app.services.categorization_service import (
+    categorize_transaction
+)
 
 def parse_csv(file):
     df = pd.read_csv(file)
 
     transactions = []
 
-    for ind, row in df.iterrows():
+    for _, row in df.iterrows():
 
-        category = categorize_transaction(row["description"])
-        
-        transactions.append(
-            {
-                "date": row["date"],
-                "description": row["description"],
-                "category": category,
-                "amount": float(row["amount"]),
-            }
-        )
+        transactions.append({
+            "date": datetime.strptime(
+                row["date"],
+                "%Y-%m-%d"
+            ).date(),
+
+            "description":
+                row["description"],
+
+            "category":
+                categorize_transaction(
+                    row["description"]
+                ),
+
+            "amount":
+                float(row["amount"])
+        })
 
     return transactions

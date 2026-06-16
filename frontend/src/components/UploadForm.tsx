@@ -24,7 +24,7 @@ function UploadForm() {
                 }
             );
 
-            console.log("Response:", response);
+            // console.log("Response:", response);
 
             const data = await response.json();
 
