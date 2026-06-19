@@ -24,7 +24,9 @@ def recommend_cards(cards, spending):
             "card_name": card.name,
             "reward": round(annual_reward, 2),
             "annual_fee": card.annual_fee,
-            "net_value": round(net_value, 2)
+            "net_value": round(net_value, 2),
+            "reason":
+                f"Best rewards acco to my model"
         })
 
     recommendations.sort(

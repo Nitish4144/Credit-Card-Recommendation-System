@@ -2,17 +2,23 @@ interface Props {
     title: string;
     value: string;
 }
-    export default function AnalyticsCard({title,value}:Props){
+
+export default function AnalyticsCard({
+    title,
+    value
+}: Props) {
+
     return (
-        <div className = "big-white p-5 rounded shadow">
-            <h3 className="test-grey-500">
+        <div className="analytics-card">
+
+            <h3 className="analytics-card-title">
                 {title}
             </h3>
 
-            <p className="text-2x1 font-bold">
+            <p className="analytics-card-value">
                 {value}
             </p>
-        </div>
 
+        </div>
     );
 }

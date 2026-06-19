@@ -18,6 +18,14 @@ def get_recommendations(db: Session = Depends(get_db)):
     cards = db.query(CreditCard).all()
 
     spending  = get_category_spending(db)
+    # spending = {
+    #     "food": 5000,
+    #     "fuel": 2000,
+    #     "travel": 8000,
+    #     "shopping": 10000,
+    #     "utilities": 3000,
+    #     "entertainment": 2000
+    # }
 
     return recommend_cards(cards, spending)
 

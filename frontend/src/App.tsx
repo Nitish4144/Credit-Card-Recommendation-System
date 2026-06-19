@@ -1,6 +1,16 @@
 import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
+import RecommendationsPage from "./pages/RecommendationPage";
 
+// function App() {
+
+//   return (
+//     <RecommendationsPage />
+//   );
+
+// }
+
+// export default App;
 
 import {
   getHealth,
@@ -41,6 +51,8 @@ function App() {
          <UploadForm />
       <hr />
          <Dashboard />
+      <hr />
+      <RecommendationsPage />
     </div>
     
   );
