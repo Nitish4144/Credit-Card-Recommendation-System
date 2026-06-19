@@ -1,14 +1,15 @@
 import pandas as pd
 import psycopg2
+import os
 
 conn = psycopg2.connect(
     host="localhost",
     database="creditcarddb",
     user="postgres",
-    password="your_password"
+    password="Nitish@4144"
 )
 
-df = pd.read_csv("data/credit_cards.csv")
+df = pd.read_csv("../database/creditcarddb.csv")
 
 cursor = conn.cursor()
 

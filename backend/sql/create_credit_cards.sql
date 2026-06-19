@@ -16,9 +16,9 @@ CREATE TABLE IF NOT EXISTS credit_cards(
 
     reward_rate FLOAT,
 
-    welcome_bonus TEXT,
+    welcome_bonus INTEGER,
 
-    lounge_access BOOLEAN DEFAULT FALSE,
+    lounge_access INTEGER DEFAULT 0,
 
     description TEXT
 );

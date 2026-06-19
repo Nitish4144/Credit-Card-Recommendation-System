@@ -3,11 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.database import engine
 from app.models.transaction import Transaction
+from app.models.credit_card import CreditCard
 from app.core.database import Base
 
 from app.api.routes import router
 from app.routes.upload import router as upload_router
 from app.api.analytics import router as analytics_router
+from app.api.recommendation import router as recommendation_router 
 
 Base.metadata.create_all(bind=engine)
 
@@ -24,3 +26,4 @@ app.add_middleware(
 app.include_router(router)
 app.include_router(upload_router)
 app.include_router(analytics_router)
+app.include_router(recommendation_router)

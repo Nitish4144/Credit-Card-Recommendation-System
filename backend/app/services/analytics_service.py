@@ -50,9 +50,7 @@ def get_summary(db: Session):
             )
     }
 
-def get_category_breakdown(
-    db: Session
-):
+def get_category_breakdown(db: Session):
     rows = (
         db.query(
             Transaction.category,
@@ -67,7 +65,7 @@ def get_category_breakdown(
                                     #     FROM transactions
                                     #     GROUP BY category;  
 
-    return [
+    return [                            # returns catgry,amnt
         {
             "category": category,
             "amount": float(amount)
@@ -159,3 +157,27 @@ def get_dashboard_data(
         "categories": categories,
         "monthly": monthly
     }
+
+
+
+def get_category_spending(db: Session):
+
+    categories = get_category_breakdown(db)
+
+    spending = {
+        "food": 0,
+        "fuel": 0,
+        "travel": 0,
+        "shopping": 0,
+        "entertainment": 0,
+        "utilities": 0
+    }
+
+    for item in categories:
+
+        category = item["category"].lower()
+
+        if category in spending:
+            spending[category] = item["amount"]
+
+    return spending
