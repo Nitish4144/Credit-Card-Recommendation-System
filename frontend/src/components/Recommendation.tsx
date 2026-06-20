@@ -34,8 +34,8 @@ export default function RecommendationCard({
                 Net Value: ₹{recommendation.net_value}
             </div>
 
-            <div className="recommendation-reason">
-                {recommendation.reason}
+            <div className="recommendation-explanation">
+                {recommendation.explanation}
             </div>
 
         </div>

@@ -4,4 +4,4 @@ class RecommendationResponse( BaseModel ):
     reward: float
     annual_fee: int
     net_value: float
-    reason: str
+    explanation: str

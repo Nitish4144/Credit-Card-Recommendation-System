@@ -5,22 +5,24 @@ import { Recommendation } from "../types/Recommendation";
 
 export function useRecommendation() {
      
-    const [recommendation, setRecommendation] = useState<Recommendation[]>([]);
+    const [recommendations, setRecommendation] = useState<Recommendation[]>([]);
+    const [loading, setLoading] = useState(true);
+
     console.log("Hook running");
 
       useEffect(() => {loadRecommendations();}, []);
 
     async function loadRecommendations(){
         try{
-            const data = 
-            await getRecommendation();
+            setLoading(true);
+            const data = await getRecommendation();
             setRecommendation(data);
         } catch(error){
-            console.error(
-                "Failed to fetch recommendations",
-                error
-            );
+            console.error("Failed to fetch recommendations",error);
+        }
+        finally {
+            setLoading(false);
         }
     }
-    return recommendation;
+    return {recommendations,loading};
 }
