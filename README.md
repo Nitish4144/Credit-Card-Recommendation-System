@@ -1,4 +1,4 @@
-# Credit Card Recommendation System with AI-Powered Financial Advisor
+# Credit Card Recommendation System with AI-Powered Financial Advisor.
 
 ## Overview
 
