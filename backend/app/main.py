@@ -10,6 +10,8 @@ from app.api.routes import router
 from app.routes.upload import router as upload_router
 from app.api.analytics import router as analytics_router
 from app.api.recommendation import router as recommendation_router 
+from app.routes.langchain_test import router as langchain_router
+
 
 Base.metadata.create_all(bind=engine)
 
@@ -27,3 +29,4 @@ app.include_router(router)
 app.include_router(upload_router)
 app.include_router(analytics_router)
 app.include_router(recommendation_router)
+app.include_router(langchain_router)
