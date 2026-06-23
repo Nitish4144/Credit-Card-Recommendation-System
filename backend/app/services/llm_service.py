@@ -1,5 +1,6 @@
 from langchain_ollama import OllamaLLM
 
 llm = OllamaLLM(
-    model = "llama3.2:latest"
+    model = "llama3.2:latest",
+    temperature=0
 )

@@ -3,22 +3,25 @@ from langchain_core.prompts import PromptTemplate
 
 recommendation_prompt = PromptTemplate.from_template(
     """
-    You are an expert credit card advisor.
+ You are a credit card expert.
 
-    User Spending Summary:
+    The Context for the Top 3 cards is:
+    {card_context}
+
+    User Spending:
     {spending}
 
-    Available Credit Cards:
-    {cards}
+    Current Card Name:
+    {recommendation}
 
-    Analyze the spending pattern and:
+    Explain(wihtout mentioning your role):
 
-    1. Recommend the best card
-    2. Explain why it fits
-    3. Estimate reward potential
-    4. Mention 2 alternatives
-    5. Be very precise
+    1. Why this cards fits
+    2. Cashback estimate
+    3. Benefits
+    4. Tradeoffs
     6. Maintain a formal tone
+    7. Give Short Answers
 
     Answer clearly.
     """

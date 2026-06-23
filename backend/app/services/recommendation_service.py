@@ -1,6 +1,6 @@
-from app.prompts.recommendation_prompt import (build_recommendation_prompt)
-
-from app.services.ollama_service import (generate_explanation)
+# from app.prompts.recommendation_prompt import (build_recommendation_prompt)
+from app.chroma.context_builder import build_card_context
+from app.services.recommendation_chain import recommendation_chain
 
 
 def calculate_reward(card, spending):
@@ -15,24 +15,27 @@ def calculate_reward(card, spending):
 
 
 def attach_explanations(top_cards, spending):
+    card_names = [card["card_name"] for card in top_cards]
+    card_context = build_card_context(card_names)
+                    # print("DEBUG\n")
+                    # print("========== CARD CONTEXT ==========")
+                    # print(type(card_context))
+                    # print(card_context)
+                    # # print(f"card_name={name} \n and \n {card_contexti}" for name,card_contexti in zip(card_names, card_context) )
+                    
+                    # print("========== LLM RESPONSE ==========")
+                    # print(type(response))
+                    # print(response)
 
     for card in top_cards:
-
-        prompt = build_recommendation_prompt(
-            card_name=card["card_name"],
-            annual_fee=card["annual_fee"],
-            reward=card["reward"],
-            food=spending.get("food", 0),
-            fuel=spending.get("fuel", 0),
-            travel=spending.get("travel", 0),
-            shopping=spending.get("shopping", 0),
-            entertainment=spending.get("entertainment", 0)
+        response = recommendation_chain.invoke(
+        {
+            "card_context": card_context,
+            "spending": spending,
+            "recommendation": card  #Current Card name
+        }
         )
-
-        try:
-            explanation = generate_explanation(prompt)
-        except Exception:
-            explanation = "AI explanation unavailable."
+        explanation = str(response)
         card["explanation"] = explanation
 
     return top_cards

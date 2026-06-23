@@ -1,0 +1,344 @@
+[
+  {
+    "name": "HDFC Millennia",
+    "content": {
+      "issuer": "HDFC",
+      "network": "Visa",
+      "annual_fee": 1000,
+      "joining_fee": 1000,
+      "food_cashback": 5,
+      "fuel_cashback": 1,
+      "travel_cashback": 1,
+      "shopping_cashback": 5,
+      "entertainment_cashback": 5,
+      "utility_cashback": 1,
+      "reward_rate": 1,
+      "welcome_bonus": 1000,
+      "lounge_access": 8,
+      "description": "Best for online shopping, food delivery and entertainment spending. High cashback card for digital-first users."
+    }
+  },
+  {
+    "name": "HDFC Infinia Metal",
+    "content": {
+      "issuer": "HDFC",
+      "network": "Visa",
+      "annual_fee": 12500,
+      "joining_fee": 12500,
+      "food_cashback": 10,
+      "fuel_cashback": 1,
+      "travel_cashback": 3.3,
+      "shopping_cashback": 10,
+      "entertainment_cashback": 10,
+      "utility_cashback": 1,
+      "reward_rate": 3.3,
+      "welcome_bonus": 12500,
+      "lounge_access": 100,
+      "description": "Premium super-luxury credit card for high spenders. Excellent rewards on shopping, dining and travel with extensive lounge access."
+    }
+  },
+  {
+    "name": "HDFC Marriott Bonvoy",
+    "content": {
+      "issuer": "HDFC",
+      "network": "Visa",
+      "annual_fee": 3000,
+      "joining_fee": 3000,
+      "food_cashback": 2,
+      "fuel_cashback": 1,
+      "travel_cashback": 8,
+      "shopping_cashback": 2,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 2,
+      "welcome_bonus": 15000,
+      "lounge_access": 12,
+      "description": "Travel and hotel rewards card focused on Marriott Bonvoy benefits. Ideal for frequent travelers and hotel stays."
+    }
+  },
+  {
+    "name": "Tata Neu Infinity",
+    "content": {
+      "issuer": "HDFC",
+      "network": "Visa",
+      "annual_fee": 1499,
+      "joining_fee": 1499,
+      "food_cashback": 5,
+      "fuel_cashback": 1.5,
+      "travel_cashback": 5,
+      "shopping_cashback": 5,
+      "entertainment_cashback": 5,
+      "utility_cashback": 5,
+      "reward_rate": 1.5,
+      "welcome_bonus": 1499,
+      "lounge_access": 8,
+      "description": "Best for Tata ecosystem users. Strong rewards on shopping, food, travel and utility payments."
+    }
+  },
+  {
+    "name": "ICICI Coral",
+    "content": {
+      "issuer": "ICICI",
+      "network": "Visa",
+      "annual_fee": 500,
+      "joining_fee": 500,
+      "food_cashback": 1,
+      "fuel_cashback": 1,
+      "travel_cashback": 1,
+      "shopping_cashback": 1,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 0.5,
+      "welcome_bonus": 500,
+      "lounge_access": 4,
+      "description": "Entry-level lifestyle credit card with basic rewards, movie offers and lounge access."
+    }
+  },
+  {
+    "name": "ICICI Rubyx",
+    "content": {
+      "issuer": "ICICI",
+      "network": "Visa",
+      "annual_fee": 3000,
+      "joining_fee": 3000,
+      "food_cashback": 2,
+      "fuel_cashback": 1,
+      "travel_cashback": 2,
+      "shopping_cashback": 2,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 1,
+      "welcome_bonus": 3000,
+      "lounge_access": 8,
+      "description": "Mid-premium lifestyle card offering balanced benefits across dining, travel and shopping."
+    }
+  },
+  {
+    "name": "ICICI Sapphiro",
+    "content": {
+      "issuer": "ICICI",
+      "network": "Visa",
+      "annual_fee": 6500,
+      "joining_fee": 6500,
+      "food_cashback": 2,
+      "fuel_cashback": 1,
+      "travel_cashback": 2,
+      "shopping_cashback": 2,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 1,
+      "welcome_bonus": 6500,
+      "lounge_access": 16,
+      "description": "Premium lifestyle card with enhanced travel benefits, entertainment privileges and lounge access."
+    }
+  },
+  {
+    "name": "Axis ACE",
+    "content": {
+      "issuer": "Axis",
+      "network": "Visa",
+      "annual_fee": 499,
+      "joining_fee": 499,
+      "food_cashback": 1.5,
+      "fuel_cashback": 1,
+      "travel_cashback": 1,
+      "shopping_cashback": 1.5,
+      "entertainment_cashback": 1.5,
+      "utility_cashback": 5,
+      "reward_rate": 1.5,
+      "welcome_bonus": 500,
+      "lounge_access": 4,
+      "description": "Excellent cashback card for utility bill payments and daily spending. Best suited for cashback seekers."
+    }
+  },
+  {
+    "name": "Axis Cashback",
+    "content": {
+      "issuer": "Axis",
+      "network": "Visa",
+      "annual_fee": 1000,
+      "joining_fee": 1000,
+      "food_cashback": 4,
+      "fuel_cashback": 1,
+      "travel_cashback": 1,
+      "shopping_cashback": 5,
+      "entertainment_cashback": 4,
+      "utility_cashback": 1,
+      "reward_rate": 1,
+      "welcome_bonus": 1000,
+      "lounge_access": 4,
+      "description": "High cashback card designed for online shopping and e-commerce purchases."
+    }
+  },
+  {
+    "name": "Axis Neo",
+    "content": {
+      "issuer": "Axis",
+      "network": "Visa",
+      "annual_fee": 250,
+      "joining_fee": 250,
+      "food_cashback": 2,
+      "fuel_cashback": 1,
+      "travel_cashback": 1,
+      "shopping_cashback": 2,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 0.5,
+      "welcome_bonus": 250,
+      "lounge_access": 2,
+      "description": "Affordable entry-level cashback card suitable for students and first-time credit card users."
+    }
+  },
+  {
+    "name": "SBI PRIME",
+    "content": {
+      "issuer": "SBI",
+      "network": "Visa",
+      "annual_fee": 2999,
+      "joining_fee": 2999,
+      "food_cashback": 2,
+      "fuel_cashback": 1,
+      "travel_cashback": 2,
+      "shopping_cashback": 2,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 1,
+      "welcome_bonus": 3000,
+      "lounge_access": 8,
+      "description": "Premium lifestyle credit card with travel, dining and entertainment benefits."
+    }
+  },
+  {
+    "name": "SBI ELITE",
+    "content": {
+      "issuer": "SBI",
+      "network": "Visa",
+      "annual_fee": 4999,
+      "joining_fee": 4999,
+      "food_cashback": 2,
+      "fuel_cashback": 1,
+      "travel_cashback": 2,
+      "shopping_cashback": 2,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 1,
+      "welcome_bonus": 5000,
+      "lounge_access": 12,
+      "description": "Luxury lifestyle card offering premium travel experiences, lounge access and reward benefits."
+    }
+  },
+  {
+    "name": "SBI Miles Elite",
+    "content": {
+      "issuer": "SBI",
+      "network": "Visa",
+      "annual_fee": 4999,
+      "joining_fee": 4999,
+      "food_cashback": 1,
+      "fuel_cashback": 1,
+      "travel_cashback": 4,
+      "shopping_cashback": 1,
+      "entertainment_cashback": 1,
+      "utility_cashback": 1,
+      "reward_rate": 2,
+      "welcome_bonus": 5000,
+      "lounge_access": 8,
+      "description": "Travel-focused credit card for frequent flyers. Earn accelerated travel rewards and air miles."
+    }
+  },
+  {
+    "name": "BPCL SBI Octane",
+    "content": {
+      "issuer": "SBI",
+      "network": "Visa",
+      "annual_fee": 1499,
+      "joining_fee": 1499,
+      "food_cashback": 1,
+      "fuel_cashback": 7.25,
+      "travel_cashback": 1,
+      "shopping_cashback": 1,
+      "entertainment_cashback": 1,
+      "utility_cashback": 1,
+      "reward_rate": 1,
+      "welcome_bonus": 1500,
+      "lounge_access": 4,
+      "description": "One of the best fuel credit cards in India. Provides exceptional rewards on fuel purchases."
+    }
+  },
+  {
+    "name": "Amex SmartEarn",
+    "content": {
+      "issuer": "American Express",
+      "network": "Amex",
+      "annual_fee": 495,
+      "joining_fee": 495,
+      "food_cashback": 5,
+      "fuel_cashback": 1,
+      "travel_cashback": 1,
+      "shopping_cashback": 5,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 1,
+      "welcome_bonus": 500,
+      "lounge_access": 0,
+      "description": "Entry-level American Express card optimized for online shopping, food delivery and digital spending."
+    }
+  },
+  {
+    "name": "Amex MRCC",
+    "content": {
+      "issuer": "American Express",
+      "network": "Amex",
+      "annual_fee": 1500,
+      "joining_fee": 1500,
+      "food_cashback": 2,
+      "fuel_cashback": 1,
+      "travel_cashback": 2,
+      "shopping_cashback": 2,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 2,
+      "welcome_bonus": 2000,
+      "lounge_access": 0,
+      "description": "Reward points focused card ideal for maximizing Membership Rewards through regular spending."
+    }
+  },
+  {
+    "name": "Amex Platinum Travel",
+    "content": {
+      "issuer": "American Express",
+      "network": "Amex",
+      "annual_fee": 5000,
+      "joining_fee": 5000,
+      "food_cashback": 2,
+      "fuel_cashback": 1,
+      "travel_cashback": 8,
+      "shopping_cashback": 2,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 2,
+      "welcome_bonus": 5000,
+      "lounge_access": 8,
+      "description": "Travel rewards card with milestone benefits, travel perks and airport lounge access."
+    }
+  },
+  {
+    "name": "Amex Platinum Reserve",
+    "content": {
+      "issuer": "American Express",
+      "network": "Amex",
+      "annual_fee": 10000,
+      "joining_fee": 10000,
+      "food_cashback": 2,
+      "fuel_cashback": 1,
+      "travel_cashback": 4,
+      "shopping_cashback": 2,
+      "entertainment_cashback": 2,
+      "utility_cashback": 1,
+      "reward_rate": 2,
+      "welcome_bonus": 10000,
+      "lounge_access": 12,
+      "description": "Premium lifestyle and travel card offering luxury benefits, dining privileges and lounge access."
+    }
+  }
+]
