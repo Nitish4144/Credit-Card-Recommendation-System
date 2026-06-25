@@ -1,5 +1,6 @@
 from langchain_chroma import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+# from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from pathlib import Path
 
 CHROMA_PATH = Path(__file__).parent / "card_db"
@@ -14,20 +15,17 @@ vector_db = Chroma(
 
 retriever = vector_db.as_retriever(search_kwargs={"k": 3})
 
-# def retrieve_cards(query: str):
-#     return retriever.invoke(query)
 
-
-def retrieve_cards(query: str, issuer=None):
-
+def retrieve_cards(query: str,k: int, issuer=None):
+    if k<= 0 : 3
     if issuer:
         return vector_db.similarity_search(
             query,
-            k=3,
+            k=k,
             filter={"issuer": issuer}
         )
 
     return vector_db.similarity_search(
         query,
-        k=3
+        k=k
     )

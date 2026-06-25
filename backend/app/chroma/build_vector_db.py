@@ -3,7 +3,7 @@ from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from pathlib import Path
 
 CHROMA_PATH = Path(__file__).parent / "card_db"
-from card_loader import load_card_documents
+from app.chroma.card_loader import load_card_documents
 
 documents = load_card_documents()
 
@@ -15,4 +15,4 @@ vector_db = Chroma.from_documents(
     embedding=embeddings,
     persist_directory=str(CHROMA_PATH)  #path for the cards_vector_databse
 )
-print(f"Stored {len(documents)} cards")
+# print(f"Stored {len(documents)} cards")

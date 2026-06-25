@@ -1,4 +1,4 @@
-from app.services.prompt_template import recommendation_prompt
+from app.prompts.prompt_template import recommendation_prompt
 
 prompt = recommendation_prompt.format(
     spending="Food: 5000, Travel: 2000",

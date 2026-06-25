@@ -17,16 +17,7 @@ def calculate_reward(card, spending):
 def attach_explanations(top_cards, spending):
     card_names = [card["card_name"] for card in top_cards]
     card_context = build_card_context(card_names)
-                    # print("DEBUG\n")
-                    # print("========== CARD CONTEXT ==========")
-                    # print(type(card_context))
-                    # print(card_context)
-                    # # print(f"card_name={name} \n and \n {card_contexti}" for name,card_contexti in zip(card_names, card_context) )
-                    
-                    # print("========== LLM RESPONSE ==========")
-                    # print(type(response))
-                    # print(response)
-
+    
     for card in top_cards:
         response = recommendation_chain.invoke(
         {

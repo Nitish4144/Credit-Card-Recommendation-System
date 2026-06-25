@@ -1,6 +1,4 @@
 import os
-# print("Current working dir:", os.getcwd())
-
 from langchain_core.documents import Document
 import json
 def load_card_documents():
