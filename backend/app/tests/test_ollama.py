@@ -1,4 +1,4 @@
-from app.services.ollama_service import generate_explanation
+from app.services.llm_service import generate_explanation
 
 print(
     generate_explanation(

@@ -3,7 +3,7 @@ from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from pathlib import Path
 
 CHROMA_PATH = Path(__file__).parent / "card_db"
-from app.chroma.card_loader import load_card_documents
+from app.chroma.document_loader import load_card_documents
 
 documents = load_card_documents()
 

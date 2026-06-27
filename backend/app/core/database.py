@@ -1,9 +1,22 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import declarative_base, sessionmaker
 
-DATABASE_URL = "postgresql://postgres:Nitish%404144@localhost:5432/creditcarddb"
+from app.core.config import DATABASE_URL
 
-engine = create_engine(DATABASE_URL)
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True,
+    future=True
+)
+
+if DATABASE_URL is None:
+    raise ValueError("DATABASE_URL environment variable is not set.")
+
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True,
+    future=True
+)
 
 SessionLocal = sessionmaker(
     autocommit=False,

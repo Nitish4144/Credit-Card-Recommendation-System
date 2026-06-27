@@ -1,4 +1,4 @@
-from retriever import retrieve_cards
+from app.chroma.retriever import retrieve_cards
 
 docs = retrieve_cards(
     "Best journey card with lounge access"

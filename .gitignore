@@ -9,6 +9,9 @@ venv/
 node_modules/
 frontend/node_modules/
 
+#backend
+backend/tests
+
 # Optional build outputs
 frontend/dist/
 frontend/build/

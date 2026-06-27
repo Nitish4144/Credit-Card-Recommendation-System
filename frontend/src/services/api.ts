@@ -1,26 +1,14 @@
-const API_BASE_URL = "http://localhost:8000";
-
-export async function getHealth() { 
+export async function deleteTransactions() {
     const response = await fetch(
-        `${API_BASE_URL}/health`
-    );
-
-return response.json();
-}
-
-export async function createTransaction() {
-    const response = await fetch(
-        `${API_BASE_URL}/transactions`,
+        "http://127.0.0.1:8000/transactions",
         {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({
-                merchant: "Amazon",
-                amount: 500,
-                category: "Shopping"
-            })
+            method: "DELETE",
         }
     );
+
+    if (!response.ok) {
+        throw new Error("Failed to delete transactions.");
+    }
+
     return response.json();
-    
 }

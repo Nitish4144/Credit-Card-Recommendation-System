@@ -12,9 +12,11 @@ export default function RecommendationPage() {
                     Top Credit Card Recommendations
                 </h1>
 
-                <h2>
-                    🤖 Generating AI recommendations...
-                </h2>
+                <h3 style={{
+                    color: "grey"
+                }}>
+                     Generating AI recommendations...
+                </h3>
 
             </div>
         );

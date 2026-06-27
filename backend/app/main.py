@@ -10,9 +10,9 @@ from app.core.exceptions import register_exception_handlers
 from app.routes.routes import router
 from app.routes.upload import router as upload_router
 from app.routes.analytics import router as analytics_router
-from app.routes.test_recommendation import router as test_recommendation_router
+from app.tests.test_recommendation import router as test_recommendation_router
 from app.routes.recommendation import router as recommendation_router 
-from app.routes.langchain_test import router as langchain_router
+from app.tests.langchain_test import router as langchain_router
 from app.routes.chat import router as chat_router
 
 Base.metadata.create_all(bind=engine)

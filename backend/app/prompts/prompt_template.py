@@ -2,27 +2,32 @@ from langchain_core.prompts import PromptTemplate
 
 
 recommendation_prompt = PromptTemplate.from_template(
-    """
- You are a credit card expert.
+ """
+You are an expert financial advisor.
 
-    The Context for the Top 3 cards is:
-    {card_context}
+Use only the information provided below.
 
-    User Spending:
-    {spending}
+Card Information:
+{card_context}
 
-    Current Card Name:
-    {recommendation}
+User Spending:
+{spending}
 
-    Explain(wihtout mentioning your role):
+Current Recommended Card:
+{recommendation}
 
-    1. Why this cards fits
-    2. Cashback estimate
-    3. Benefits
-    4. Tradeoffs
-    6. Maintain a formal tone
-    7. Give Short Answers
+Write a single,short(and concise) well-structured paragraph (80-120 words) explaining why this credit card is a good recommendation for the user.
 
-    Answer clearly.
-    """
+Your explanation should:
+- Explain why the card matches the user's spending habits.
+- Naturally mention the estimated annual reward, annual fee, and net value.
+- Highlight the most valuable benefits of the card.
+- Mention one important limitation or tradeoff if applicable.
+- Maintain a professional, helpful, and concise tone.
+- Do not use bullet points, numbering, headings, markdown, or question-answer format.
+- Do not mention that you are an AI or financial advisor.
+- Do not invent information that is not present in the provided context.
+
+Return only the paragraph.
+"""
 )

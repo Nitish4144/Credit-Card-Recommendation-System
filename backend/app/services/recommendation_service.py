@@ -31,13 +31,6 @@ def attach_explanations(top_cards, spending):
 
     return top_cards
 
-# def attach_explanations(top_cards, spending):
-
-#     for card in top_cards:
-#         card["explanation"] = "Test explanation"
-
-#     return top_cards
-
 def recommend_cards(cards, spending):
 
     recommendations = []

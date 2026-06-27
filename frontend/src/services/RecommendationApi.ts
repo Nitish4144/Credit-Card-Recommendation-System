@@ -6,6 +6,6 @@ export async function getRecommendation() {
 
         console.log("Calling recommendations API");
 
-    const response = await axios.get(`${API_BASE}/recommendations`);
+    const response = await axios.get(`${API_BASE}/recommendations/`);
     return response.data;
 }

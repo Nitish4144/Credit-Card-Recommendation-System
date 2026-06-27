@@ -20,6 +20,6 @@ def register_exception_handlers(app: FastAPI):
             status_code=500,
             content={
                 "success": False,
-                "error": "Internal Server Error"
+                "error": str(exc)
             }
         )

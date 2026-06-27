@@ -72,3 +72,26 @@ def get_monthly_spend(db: Session):
         }
         for month, amount in rows
     ]
+
+
+def save_transactions(
+    db: Session,
+    transactions: list
+):
+    for transaction in transactions:
+
+        db.add(
+            Transaction(
+                date=transaction["date"],
+                description=transaction["description"],
+                category=transaction["category"],
+                amount=transaction["amount"]
+            )
+        )
+
+    db.commit()
+
+
+def delete_all_transactions(db: Session):
+    db.query(Transaction).delete()
+    db.commit()

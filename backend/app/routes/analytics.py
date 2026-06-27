@@ -8,12 +8,18 @@ from app.schemas.analytics import DashboardResponse
 
 from app.services.analytics_service import (
     get_dashboard_data,
-    get_category_breakdown,
-    get_monthly_spend,
     get_summary,
-    get_total_spend,
-    get_transaction_count
+    get_category_spending
+)
 
+from app.repositories.transaction_repository import (
+    get_category_breakdown,
+    get_monthly_spend
+)
+
+from app.repositories.credit_card_repository import( 
+    get_all_cards,
+    get_card_count
 )
 
 router  = APIRouter(prefix="/analytics" , tags =["Analytics"])
