@@ -5,6 +5,7 @@ from app.core.database import engine
 from app.models.transaction import Transaction
 from app.models.credit_card import CreditCard
 from app.core.database import Base
+from app.core.exceptions import register_exception_handlers
 
 from app.routes.routes import router
 from app.routes.upload import router as upload_router
@@ -17,6 +18,7 @@ from app.routes.chat import router as chat_router
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI( title = "Credit Card Recommendation API")
+register_exception_handlers(app)
 
 app.add_middleware(
     CORSMiddleware,
