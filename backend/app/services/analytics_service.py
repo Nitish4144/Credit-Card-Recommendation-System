@@ -1,37 +1,17 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import func
+
+from app.repositories import transaction_repository
 from app.models.transaction import Transaction
-
-
-
-def get_total_spend(db: Session) -> float:
-    total = ( 
-        db.query(
-            func.coalesce(
-                func.sum(Transaction.amount),
-                0
-            )
-        )
-        .scalar()
-    )
-
-    return float(total)
-
-
-def get_transaction_count(
-    db: Session
-) -> int:
-    return db.query(Transaction).count()
-
+from app.repositories import transaction_repository
 
 def get_summary(db: Session):
-    total_spend = get_total_spend(db)
+    total_spend = transaction_repository.get_total_spend(db)
 
     transaction_count = (
-        get_transaction_count(db)
+        transaction_repository.get_transaction_count(db)
     )
 
-    monthly = get_monthly_spend(db)
+    monthly = transaction_repository.get_monthly_spend(db)
 
     average_monthly_spend = (
         total_spend / len(monthly)
@@ -50,91 +30,22 @@ def get_summary(db: Session):
             )
     }
 
-def get_category_breakdown(db: Session):
-    rows = (
-        db.query(
-            Transaction.category,
-            func.sum(Transaction.amount)
-        ).group_by(Transaction.category).all()
-    ) 
-
-                                    # the above is equivalent to the following SQL cmd
-                                    #     SELECT
-                                    #         category
-                                    #         SUM(amount)
-                                    #     FROM transactions
-                                    #     GROUP BY category;  
-
-    return [                            # returns catgry,amnt
-        {
-            "category": category,
-            "amount": float(amount)
-        }
-        for category, amount in rows
-    ]
-
-
-def get_monthly_spend(db: Session):
-    rows = (
-        db.query(
-            func.date_trunc(
-                "month",
-                Transaction.date
-            ),
-            func.sum(Transaction.amount)
-        )
-        .group_by(
-            func.date_trunc(
-                "month",
-                Transaction.date
-            )
-        )
-        .order_by(
-            func.date_trunc(
-                "month",
-                Transaction.date
-            )
-        )
-        .all()
-    )
-
-
-                                                        # SELECT
-                                                        #     DATE_TRUNC('month', date) AS month,
-                                                        #     SUM(amount) AS total_amount
-                                                        # FROM transactions
-                                                        # GROUP BY
-                                                        #     DATE_TRUNC('month', date)
-                                                        # ORDER BY
-                                                        #     DATE_TRUNC('month', date);
-
-    return [
-        {
-            "month": month.strftime(
-                "%b %Y"
-            ),
-            "amount": float(amount)
-        }
-        for month, amount in rows
-    ]
-
-
 
 def get_dashboard_data(
     db: Session
 ):
-    total_spend = get_total_spend(db)
+    total_spend = transaction_repository.get_total_spend(db)
 
     transaction_count = (
-        get_transaction_count(db)
+        transaction_repository.get_transaction_count(db)
     )
 
     categories = (
-        get_category_breakdown(db)
+        transaction_repository.get_category_breakdown(db)
     )
 
     monthly = (
-        get_monthly_spend(db)
+        transaction_repository.get_monthly_spend(db)
     )
 
     average_monthly_spend = (
@@ -162,7 +73,7 @@ def get_dashboard_data(
 
 def get_category_spending(db: Session):
 
-    categories = get_category_breakdown(db)
+    categories = transaction_repository.get_category_breakdown(db)
 
     spending = {
         "food": 0,
