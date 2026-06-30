@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.database import engine
 from app.models.transaction import Transaction
 from app.models.credit_card import CreditCard
+from app.models.user import User
 from app.core.database import Base
 from app.core.exceptions import register_exception_handlers
 

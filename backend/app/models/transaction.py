@@ -1,11 +1,13 @@
-from sqlalchemy import Column, Integer, String, Float, Date
-from app.core.database import Base
+from sqlalchemy import Column, Integer, String, Float, Date, ForeignKey
+from sqlalchemy.orm import relationship
 
+from app.core.database import Base
 
 class Transaction(Base):
     __tablename__ = "transactions"
 
     id = Column(Integer, primary_key=True, index=True)
+    user_id=Column(Integer,ForeignKey("users.id"),nullable=False)
 
     date = Column(Date)
 
@@ -14,3 +16,5 @@ class Transaction(Base):
     category = Column(String)
 
     amount = Column(Float)
+
+    user = relationship("user",back_populates="transactions")
