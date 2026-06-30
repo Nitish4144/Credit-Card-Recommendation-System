@@ -31,11 +31,15 @@ class AuthService:
     
 
     @staticmethod
-    def login(db: Session, user: UserLogin):
+    def login(
+        db: Session,
+        email: str,
+        password: str
+    ):
 
         existing_user = UserRepository.get_by_email(
             db,
-            user.email
+            email
         )
 
         if existing_user is None:
@@ -45,7 +49,7 @@ class AuthService:
             )
 
         if not verify_password(
-            user.password,
+            password,
             existing_user.hashed_password
         ):
             raise HTTPException(

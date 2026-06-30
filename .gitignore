@@ -10,7 +10,7 @@ node_modules/
 frontend/node_modules/
 
 #backend
-backend/tests
+backend/app/tests
 
 # Optional build outputs
 frontend/dist/

@@ -4,7 +4,10 @@ from sqlalchemy import func
 from app.models.transaction import Transaction
 
 
-def get_total_spend(db: Session) -> float:
+def get_total_spend(
+    db: Session,
+    user_id: int
+) -> float:
     total = (
         db.query(
             func.coalesce(
@@ -12,22 +15,34 @@ def get_total_spend(db: Session) -> float:
                 0
             )
         )
+        .filter(Transaction.user_id == user_id)
         .scalar()
     )
 
     return float(total)
 
 
-def get_transaction_count(db: Session) -> int:
-    return db.query(Transaction).count()
+def get_transaction_count(
+    db: Session,
+    user_id: int
+) -> int:
+    return (
+        db.query(Transaction)
+        .filter(Transaction.user_id == user_id)
+        .count()
+    )
 
 
-def get_category_breakdown(db: Session):
+def get_category_breakdown(
+    db: Session,
+    user_id: int
+):
     rows = (
         db.query(
             Transaction.category,
             func.sum(Transaction.amount)
         )
+        .filter(Transaction.user_id == user_id)
         .group_by(Transaction.category)
         .all()
     )
@@ -41,7 +56,10 @@ def get_category_breakdown(db: Session):
     ]
 
 
-def get_monthly_spend(db: Session):
+def get_monthly_spend(
+    db: Session,
+    user_id: int
+):
     rows = (
         db.query(
             func.date_trunc(
@@ -50,6 +68,7 @@ def get_monthly_spend(db: Session):
             ),
             func.sum(Transaction.amount)
         )
+        .filter(Transaction.user_id == user_id)
         .group_by(
             func.date_trunc(
                 "month",
@@ -76,12 +95,13 @@ def get_monthly_spend(db: Session):
 
 def save_transactions(
     db: Session,
-    transactions: list
+    transactions: list,
+    user_id: int
 ):
     for transaction in transactions:
-
         db.add(
             Transaction(
+                user_id=user_id,
                 date=transaction["date"],
                 description=transaction["description"],
                 category=transaction["category"],
@@ -92,6 +112,14 @@ def save_transactions(
     db.commit()
 
 
-def delete_all_transactions(db: Session):
-    db.query(Transaction).delete()
+def delete_user_transactions(
+    db: Session,
+    user_id: int
+):
+    (
+        db.query(Transaction)
+        .filter(Transaction.user_id == user_id)
+        .delete()
+    )
+
     db.commit()

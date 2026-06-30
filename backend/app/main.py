@@ -33,7 +33,7 @@ app.add_middleware(
 app.include_router(router)
 app.include_router(upload_router)
 app.include_router(analytics_router)
-app.include_router(test_recommendation_router)
+# app.include_router(test_recommendation_router)
 app.include_router(recommendation_router)
 app.include_router(langchain_router)
 app.include_router(chat_router)

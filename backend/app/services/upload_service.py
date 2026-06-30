@@ -8,7 +8,8 @@ from app.services.csv_parser import parse_csv
 
 def upload_csv(
     file: UploadFile,
-    db: Session
+    db: Session,
+    user_id: int
 ):
     logger.info(
         "Received CSV upload: %s",
@@ -24,7 +25,8 @@ def upload_csv(
 
     transaction_repository.save_transactions(
         db,
-        transactions
+        transactions,
+        user_id
     )
 
     logger.info(
@@ -37,8 +39,15 @@ def upload_csv(
         "count": len(transactions)
     }
 
-def clear_transactions(db: Session):
-    transaction_repository.delete_all_transactions(db)
+
+def clear_transactions(
+    db: Session,
+    user_id: int
+):
+    transaction_repository.delete_user_transactions(
+        db,
+        user_id
+    )
 
     return {
         "message": "All transactions deleted successfully."
