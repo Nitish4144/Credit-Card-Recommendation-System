@@ -1,3 +1,10 @@
+import logging
+
+logging.getLogger("sentence_transformers").setLevel(logging.WARNING)
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("huggingface_hub").setLevel(logging.WARNING)
+
+
 from langchain_chroma import Chroma
 # from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings

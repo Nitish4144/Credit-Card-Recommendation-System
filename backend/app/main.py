@@ -15,6 +15,7 @@ from app.tests.test_recommendation import router as test_recommendation_router
 from app.routes.recommendation import router as recommendation_router 
 from app.tests.langchain_test import router as langchain_router
 from app.routes.chat import router as chat_router
+from app.routes.auth import router as auth_router
 
 Base.metadata.create_all(bind=engine)
 
@@ -36,3 +37,4 @@ app.include_router(test_recommendation_router)
 app.include_router(recommendation_router)
 app.include_router(langchain_router)
 app.include_router(chat_router)
+app.include_router(auth_router)
