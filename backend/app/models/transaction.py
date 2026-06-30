@@ -17,4 +17,4 @@ class Transaction(Base):
 
     amount = Column(Float)
 
-    user = relationship("user",back_populates="transactions")
+    user = relationship("User",back_populates="transactions")
