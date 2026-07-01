@@ -13,15 +13,7 @@ export default function ChatBot() {
     } = useChat();
 
     return (
-        <div
-            style={{
-                marginTop: "20px",
-                padding: "20px",
-                border: "1px solid #ddd",
-                borderRadius: "10px",
-                backgroundColor: "#fafafa",
-            }}
-        >
+        <div className="chat-bot" >
             <h2>AI Credit Card Assistant</h2>
 
             <ChatWindow

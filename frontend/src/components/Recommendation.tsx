@@ -13,13 +13,14 @@ export default function RecommendationCard({
 
     return (
         <div className="recommendation-card">
+            <div style={{ display: "flex", alignItems: "center", gap: "15px"}}>
+                <p className="recommendation-rank">
+                    #{rank}
+                </p>
 
-            <div className="recommendation-rank">
-                #{rank}
-            </div>
-
-            <div className="recommendation-name">
-                {recommendation.card_name}
+                <p className="recommendation-name">
+                    {recommendation.card_name}
+                </p>
             </div>
 
             <div className="recommendation-detail">

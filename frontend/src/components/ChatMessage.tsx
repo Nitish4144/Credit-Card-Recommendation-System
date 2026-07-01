@@ -10,22 +10,11 @@ export default function ChatMessage({
     const isUser = message.role === "user";
 
     return (
-        <div
-            style={{
-                display: "flex",
-                justifyContent: isUser ? "flex-end" : "flex-start",
-                marginBottom: "12px",
-            }}
+       <div
+            className={isUser ? "message-row user" : "message-row ai"}
         >
             <div
-                style={{
-                    backgroundColor: isUser ? "#2563eb" : "#f3f4f6",
-                    color: isUser ? "#ffffff" : "#111827",
-                    padding: "10px 14px",
-                    borderRadius: "12px",
-                    maxWidth: "70%",
-                    wordBreak: "break-word",
-                }}
+                className={isUser ? "message user-message" : "message ai-message"}
             >
                 {message.content}
             </div>

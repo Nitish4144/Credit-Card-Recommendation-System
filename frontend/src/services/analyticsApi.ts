@@ -1,21 +1,16 @@
-import axios from "axios";
+import api from "./api";
 
-const API_BASE = "http://localhost:8000";
-
-export const getSummary = async() => {
-    const response = await axios.get(`${API_BASE}/analytics/summary`);
-
+export const getSummary = async () => {
+    const response = await api.get("/analytics/summary");
     return response.data;
 };
 
-export const getCategories = async() => {
-    const response = await axios.get(`${API_BASE}/analytics/categories`);
-
+export const getCategories = async () => {
+    const response = await api.get("/analytics/categories");
     return response.data;
 };
 
-export const getMonthly = async() => {
-    const response = await axios.get(`${API_BASE}/analytics/monthly`);
-
+export const getMonthly = async () => {
+    const response = await api.get("/analytics/monthly");
     return response.data;
 };

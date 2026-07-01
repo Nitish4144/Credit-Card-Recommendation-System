@@ -9,17 +9,7 @@ export default function ChatWindow({
     messages,
 }: ChatWindowProps) {
     return (
-        <div
-            style={{
-                height: "400px",
-                overflowY: "auto",
-                border: "1px solid #d1d5db",
-                borderRadius: "8px",
-                padding: "16px",
-                backgroundColor: "#ffffff",
-                marginBottom: "16px",
-            }}
-        >
+        <div className="chat-window" >
             {messages.length === 0 ? (
                 <p
                     style={{

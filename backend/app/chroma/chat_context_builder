@@ -1,0 +1,34 @@
+from app.chroma.context_builder import build_card_context
+from app.services.recommendation_service import tp_cards
+
+
+def build_chat_context(question: str) -> str:
+    """
+    Builds the complete context supplied to the chatbot.
+    """
+
+    recommendation_context = "Current Recommended Cards:\n\n"
+
+    card_names = []
+
+    for i, card in enumerate(tp_cards, start=1):
+
+        recommendation_context += (
+            f"{i}. {card['card_name']}\n"
+            f"Reward : ₹{card['reward']}\n"
+            f"Annual Fee : ₹{card['annual_fee']}\n"
+            f"Net Value : ₹{card['net_value']}\n\n"
+        )
+
+        card_names.append(card["card_name"])
+
+    card_context = build_card_context(card_names)
+
+    context = (
+        recommendation_context
+        + "\n"
+        + "Card Details:\n\n"
+        + card_context
+    )
+
+    return context

@@ -29,46 +29,21 @@ export default function ChatInput({
 
     return (
 
-        <div
-            style={{
-                display: "flex",
-                gap: "10px"
-            }}
-        >
-
+        <div className="chat-input-container">
             <input
-
+                className="chat-input"
                 value={question}
-
-                onChange={(e) =>
-                    setQuestion(e.target.value)
-                }
-
+                onChange={(e) => setQuestion(e.target.value)}
                 placeholder="Ask about credit cards..."
-
-                style={{
-                    flex: 1,
-                    padding: "10px"
-                }}
-
             />
 
             <button
-
+                className="chat-send-button"
                 onClick={handleSubmit}
-
                 disabled={loading}
-
             >
-
-                {
-                    loading
-                        ? "Thinking..."
-                        : "Send"
-                }
-
+                {loading ? "Thinking..." : "Send"}
             </button>
-
         </div>
 
     );

@@ -1,13 +1,25 @@
+body {
+    background: #121212;
+}
+html {
+    background: #121212;
+}
+
+#root {
+    min-height: 100vh;
+    background: #121212;
+}
+
 .analytics-card {
-    background-color: white;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     min-width: 200px;
 }
 
 .analytics-card-title {
-    color: #666;
+    color: #a1a1aa;
     font-size: 14px;
     margin-bottom: 10px;
 }
@@ -15,19 +27,24 @@
 .analytics-card-value {
     font-size: 28px;
     font-weight: bold;
+    color: #ffffff;
     margin: 0;
 }
+
+/* Category Table */
+
 .category-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
+    background-color: #1e1e1e;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #333;
 }
 
 .category-table th {
-    background-color: #f5f5f5;
+    background-color: #2b2b2b;
+    color: #ffffff;
     padding: 12px;
     text-align: left;
     font-weight: bold;
@@ -35,55 +52,64 @@
 
 .category-table td {
     padding: 12px;
-    border-top: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    border-top: 1px solid #333;
 }
 
 .category-table tr:hover {
-    background-color: #f9f9f9;
+    background-color: #2a2a2a;
 }
 
+/* Recommendation Cards */
+
 .recommendation-card {
-    background-color: white;
-    border: 1px solid #dddddd;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .recommendation-rank {
-    font-size: 24px;
+    font-size: 50px;
     font-weight: bold;
     color: #f59e0b;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .recommendation-name {
     font-size: 22px;
     font-weight: bold;
-    margin-bottom: 12px;
+    color: #ffffff;
+    margin: 0;
 }
 
 .recommendation-detail {
+    font-size: 14px;
+    color: #d4d4d8;
     margin: 8px 0;
 }
 
 .recommendation-explanation {
     margin-top: 12px;
-    color: #666666;
-    font-style: italic;
+    color: #9ca3af;
+    line-height: 1.6;
 }
 
 /* Dashboard */
 
 .dashboard-container {
     padding: 30px;
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
 }
 
 .dashboard-title {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 24px;
+    color: #ffffff;
 }
 
 .analytics-cards {
@@ -103,10 +129,10 @@
 .chart-card {
     flex: 1;
     min-width: 400px;
-    background: white;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .table-section {
@@ -117,10 +143,115 @@
 
 .recommendation-page {
     padding: 30px;
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
 }
 
 .recommendation-page-title {
     font-size: 32px;
     font-weight: bold;
+    color: #ffffff;
     margin-bottom: 24px;
+}
+
+
+/* chat page */
+
+.chat-window {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.chat-bot {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px 16px;
+    background-color: #2f2f2f;
+    color: #ececec;
+    border: 1px solid #444;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.chat-input::placeholder {
+    color: #9ca3af;
+}
+
+.chat-input:focus {
+    border-color: #10a37f;
+}
+
+.chat-send-button {
+    padding: 12px 20px;
+    background-color: #10a37f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.chat-send-button:hover:not(:disabled) {
+    background-color: #0d8f6f;
+}
+
+.chat-send-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.message-row {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.message-row.user {
+    justify-content: flex-end;
+}
+
+.message-row.ai {
+    justify-content: flex-start;
+}
+
+.message {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 14px;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.user-message {
+    background: #1083a3;
+    color: white;
+}
+
+.ai-message {
+    background: #212529;
+    color: #ececec;
+    border: 1px solid #444;
 }

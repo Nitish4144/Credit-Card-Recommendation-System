@@ -1,11 +1,6 @@
-import axios from "axios";
-
-const API_BASE = "http://localhost:8000";
+import api from "./api";
 
 export async function getRecommendation() {
-
-        console.log("Calling recommendations API");
-
-    const response = await axios.get(`${API_BASE}/recommendations/`);
+    const response = await api.get("/recommendations/");
     return response.data;
 }

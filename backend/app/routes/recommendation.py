@@ -14,6 +14,8 @@ router = APIRouter(
     tags=["Recommendations"]
 )
 
+car =None
+spar =None
 
 @router.get("/")
 def get_recommendations(
@@ -27,6 +29,8 @@ def get_recommendations(
         db,
         current_user.id
     )
+    car = cards
+    spar = spending
 
     return recommend_cards(
         cards,
