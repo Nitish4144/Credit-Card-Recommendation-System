@@ -278,15 +278,15 @@ Each credit card contains:
 
 ### Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Dashboard.png)
 
 ### Recommendation Engine
 
-![Recommendations](screenshots/recommendations.png)
+![Recommendations](screenshots/Recommendations.png)
 
 ### AI Assistant
 
-![Chatbot](screenshots/chatbot.png)
+![Chatbot](screenshots/Chatbot.png)
 
 ---
 
