@@ -269,8 +269,8 @@ Each credit card contains:
 
 1. User submits a question.
 2. Relevant card information is retrieved from ChromaDB.
-3. Context is passed to Gemini.
-4. Gemini generates a grounded response.
+3. Context is passed to LLM.
+4. LLM generates a grounded response.
 
 ---
 
@@ -332,20 +332,6 @@ createdb credit_card_advisor
 psql credit_card_advisor < database/schema.sql
 ```
 
----
-
-## Future Improvements
-
-* Real-time bank integrations
-* OCR support for PDF statements
-* Multi-user support
-* Spending anomaly detection
-* Financial health scoring
-* Goal-based savings recommendations
-* Credit score awareness
-* Multi-LLM support
-
----
 
 ## Learning Outcomes
 
