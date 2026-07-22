@@ -25,6 +25,8 @@ export default function Login() {
     return (
         <div
             style= {{
+                color: "white",
+                textAlign: "center",
                 maxWidth: 400,
                 margin: "100px auto",
             }}

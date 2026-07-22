@@ -311,7 +311,7 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
 ### Frontend Setup
@@ -346,18 +346,6 @@ This project demonstrates:
 * LLM Integration
 * Cloud Deployment
 * Software Architecture
-
----
-
-## Deployment
-
-Frontend: [Vercel URL]
-
-Backend: [Render URL]
-
-Database: Neon PostgreSQL
-
----
 
 ## Author
 

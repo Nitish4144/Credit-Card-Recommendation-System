@@ -1,4 +1,5 @@
 import { useState } from "react";
+import api from "../services/api";
 
 function UploadForm() {
     const [file, setFile] = useState<File | null>(null);
@@ -16,17 +17,12 @@ function UploadForm() {
         try {
             console.log("Uploading...");
 
-            const response = await fetch(
-                "http://localhost:8000/upload",
-                {
-                    method: "POST",
-                    body: formData,
-                }
-            );
+            const response = await api.post("/upload", formData);
+            
+            const data = response.data;
+            // const data = await response.json();
+            console.log("Response:", response);
 
-            // console.log("Response:", response);
-
-            const data = await response.json();
 
             console.log("Data:", data);
 
