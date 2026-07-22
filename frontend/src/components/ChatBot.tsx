@@ -18,6 +18,7 @@ export default function ChatBot() {
 
             <ChatWindow
                 messages={messages}
+                loading={loading}
             />
 
             {error && (
