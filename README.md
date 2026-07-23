@@ -1,5 +1,4 @@
-# Credit Card Recommendation System with AI-Powered Financial Advisor.
-
+# Credit Card Recommendation System.
 ## Overview
 
 Choosing the right credit card is difficult because reward structures, annual fees, cashback categories, and spending habits vary from person to person.
@@ -93,7 +92,7 @@ Response Generation<br>
 
 * React
 * Vite
-* Tailwind CSS
+* CSS
 * Recharts
 
 ### Backend
@@ -127,7 +126,7 @@ Response Generation<br>
 ## Project Structure
 
 ```text
-credit-card-advisor/
+Credit-Card-Recommendation-System/
 │
 ├── backend/
 │   ├── app/
@@ -297,9 +296,9 @@ Each credit card contains:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/credit-card-advisor.git
+git clone https://github.com/Nitish4144/Credit-Card-Recommendation-System.git
 
-cd credit-card-advisor
+cd Credit-Card-Recommendation-System
 ```
 
 ### Backend Setup
@@ -346,13 +345,10 @@ This project demonstrates:
 * Retrieval-Augmented Generation (RAG)
 * Vector Databases
 * LLM Integration
-* Cloud Deployment
 * Software Architecture
 
 ## Author
 
 Nitish
-
-Civil Engineering Department
 
 Passionate about building practical technology solutions that combine software engineering, data processing, and artificial intelligence.
