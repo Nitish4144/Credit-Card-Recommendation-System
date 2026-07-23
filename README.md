@@ -129,37 +129,39 @@ Response Generation<br>
 ```text
 credit-card-advisor/
 │
-├── frontend/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-│
 ├── backend/
-│   ├── api/
-│   ├── services/
-│   ├── repositories/
-│   ├── models/
-│   └── schemas/
+│   ├── app/
+│   │   ├── auth/
+│   │   ├── chroma/
+│   │   ├── core/
+│   │   ├── data/
+│   │   ├── models/
+│   │   ├── prompts/
+│   │   ├── repositories/
+│   │   ├── routes/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   └── tests/
+│   └── sql/
+│
+├── frontend/
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── context/
+│       ├── data/
+│       ├── hooks/
+│       ├── mock/
+│       ├── pages/
+│       ├── services/
+│       └── types/
 │
 ├── database/
-│   ├── schema.sql
-│   └── seed_data.sql
-│
-├── rag/
-│   ├── embeddings/
-│   ├── chromadb/
-│   └── retriever/
-│
-├── docs/
-│   ├── architecture.png
-│   ├── erd.png
-│   └── api-flow.png
 │
 ├── screenshots/
-├── tests/
+│
 ├── README.md
-└── requirements.txt
+└── .gitignore
 ```
 
 ---
